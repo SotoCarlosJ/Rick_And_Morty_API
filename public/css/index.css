@@ -3,6 +3,7 @@
 :root {
     /* Palette */
     --black-solid:#000000;
+    --black-A: #1A1A1A;
     --light-black:#1E1E20;
     --dark-gray:#313234;
     --blue-solid:#11B0C8;
@@ -147,8 +148,10 @@ img {
     padding: var(--spacing-68);
     display: grid;
     place-items: center;
+    display: none;
 }
 .loader__ring {
+    display: none;
     width: 128px;
     height: 128px;
     border: 12px solid var(--dark-gray);
@@ -163,4 +166,45 @@ img {
     100% {
         transform: rotate(360deg);
     }
+}
+
+/**
+* Estilos para el main
+*/
+.main {
+    padding: var(--spacing-68);
+}
+.main__container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-36);
+}
+/**
+* Esticlos para el input buscardor de personajes
+*/
+.search {
+    display: flex;
+    align-items: center;
+    max-width: 400px;
+    background-color: var(--black-A);
+    border-radius: 32px;
+    padding: var(--spacing-12) var(--spacing-16);
+    color: var(--white-solid);
+    outline: none;
+}
+.search__input {
+    border-style: none;
+    background-color: inherit;
+    font-size: var(--font-medium);
+    font-weight: 400;
+    width: 100%;
+    outline: none;
+    color: var(--white-solid);
+}
+.search__input::placeholder {
+    color: var(--dark-gray);
+}
+.search__icon {
+    font-size: var(--font-large);
+    cursor: pointer;
 }
