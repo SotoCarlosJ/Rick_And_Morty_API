@@ -250,11 +250,11 @@ img {
     gap: var(--spacing-8);
     font-size: var(--font-medium);
 }
-.card__icon {
+.status__icon {
     display: flex;
     color: var(--green-solid);
 }
-.card__icon--death {
+.status__icon--death {
     color: var(--red-solid);
 }
 .card__link {
