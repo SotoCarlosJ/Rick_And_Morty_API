@@ -8,14 +8,14 @@
     <title>Character | Rick & Morty API</title>
 </head>
 <body>
-    <header>
-        <section>
-            <picture>
+    <header class="header">
+        <section class="header__section container">
+            <picture class="header__logo">
                 <img src="../public/img/Logo_Rick_&_Morty_B.png" alt="logo Rick & Morty Show">
             </picture>
-            <div>
-                <button><iconify-icon icon="ph:moon"></iconify-icon>Oscuro</button>
-                <button><iconify-icon icon="ph:sun"></iconify-icon>Claro</button>
+            <div class="header__btns">
+                <button class="btn"><iconify-icon class="btn__icon" icon="ph:moon"></iconify-icon>Oscuro</button>
+                <button class="btn"><iconify-icon class="btn__icon" icon="ph:sun"></iconify-icon>Claro</button>
             </div>
         </section>
     </header>
@@ -28,9 +28,13 @@
         </section> 
     </main>
 
-    <footer>
-        <p>Practicas de fetch y DOM by Carlos Soto 2023</p>
+    <footer class="footer">
+        <section class="container footer__section">
+            <p class="footer__text">Practicas de fetch y DOM</p>
+            <p class="footer__text">&copy; Carlos Soto</p>
+        </section>
     </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
 </body>
 </html>
