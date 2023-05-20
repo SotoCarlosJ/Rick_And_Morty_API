@@ -10,6 +10,7 @@
     --light-blue:#42B4CA;
     --green-solid:#BFDE42;
     --white-solid:#FFFFFF;
+    --red-solid: #d00000;
 
     /* Typography */
     --base-font: 'Roboto', sans-serif;
@@ -180,7 +181,7 @@ img {
     gap: var(--spacing-36);
 }
 /**
-* Esticlos para el input buscardor de personajes
+* Estilos para el input buscardor de personajes
 */
 .search {
     display: flex;
@@ -207,4 +208,62 @@ img {
 .search__icon {
     font-size: var(--font-large);
     cursor: pointer;
+}
+
+/**
+* Estilos para el section de listado de personajes
+*/
+.characters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-16);
+}
+.card {
+    flex: 1 1 clamp(200px, 20%, 20%);
+    background-color: var(--dark-gray);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-16);
+    padding: var(--spacing-16);
+}
+.card__img {
+    border-radius: 16px;
+}
+.card__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-16);
+}
+.card__tittle {
+    font-weight: 700;
+    font-size: var(--font-medium);
+}
+.card__info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-8);
+    justify-content: center;
+    align-items: flex-start;
+}
+.card__text {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-8);
+    font-size: var(--font-medium);
+}
+.card__icon {
+    display: flex;
+    color: var(--green-solid);
+}
+.card__icon--death {
+    color: var(--red-solid);
+}
+.card__link {
+    display: flex;
+    justify-content: flex-end;
+    gap: var(--spacing-8);
+    color: var(--light-blue);
+    font-size: var(--font-small);
+    font-weight: 400;
 }
