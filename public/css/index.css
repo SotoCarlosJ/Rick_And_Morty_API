@@ -123,3 +123,19 @@ img {
 .light-theme {
     display: none;
 }
+
+/**
+* Estilos para el footer
+*/
+.footer {
+    padding: var(--spacing-68);
+}
+.footer__section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 2px solid var(--white-solid);
+}
+.footer__text {
+    padding-top: var(--spacing-24);
+}
