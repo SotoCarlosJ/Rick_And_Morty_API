@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+
+:root {
+    /* Palette */
+    --black-solid:#1A1A1A;
+    --light-black:#1E1E20;
+    --dark-gray:#313234;
+    --blue-solid:#11B0C8;
+    --light-blue:#42B4CA;
+    --green-solid:#BFDE42;
+    --white-solid:#FFFFFF;
+
+    /* Typography */
+    --base-font: 'Roboto', sans-serif;
+
+    /* Font-sizes */
+    --font-display: 4.8em;
+    --font-jumbo: 3.2em;
+    --font-large: 2.4em;
+    --font-medium: 1.6em;
+    --font-small: 1.4em;
+
+    /* Spacing */
+    --spacing-128: 12.8rem;
+    --spacing-68: 6.8rem;
+    --spacing-36: 3.6rem;
+    --spacing-28: 2.8rem;
+    --spacing-24: 2.4rem;
+    --spacing-20: 2em;
+    --spacing-16: 1.6rem;
+    --spacing-12: 1.2rem;
+    --spacing-8: 0.8rem;
+}
+
+/* Normalizacion manual de estilos y utilidades */
+*, 
+*::before, 
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-family: var(--base-font);
+    font-size: 62.5%;
+    color: var(--white-solid);
+    background-color: var(--light-black);
+}
+a {
+    text-decoration: none;
+    color: inherit;
+    font-family: inherit;
+}
+h1 {
+    font-weight: 700;
+    font-size: var(--font-display);
+}
+h2 {
+    font-weight: 400;
+    font-size: var(--font-jumbo);
+}
+h3 {
+    font-weight: 700;
+    font-size: var(--font-large);
+}
+h4 {
+    font-weight: 400;
+    font-size: var(--font-medium);
+}
+p {
+    font-weight: 400;
+    font-size: var(--font-small);
+}
+img {
+    width: 100%;
+}
+.container {
+    max-width: 120rem;
+    margin: 0 auto;
+}
