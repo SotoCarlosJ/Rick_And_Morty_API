@@ -8,21 +8,21 @@
     <title>Home | Rick & Morty API</title>
 </head>
 <body>
-    <header>
-        <section>
-            <picture>
+    <header class="header">
+        <section class="header__section container">
+            <picture class="header__logo">
                 <img src="./public/img/Logo_Rick_&_Morty_A.png" alt="logo Rick & Morty Show">
             </picture>
-            <div>
-                <button><iconify-icon icon="ph:moon"></iconify-icon>Oscuro</button>
-                <button><iconify-icon icon="ph:sun"></iconify-icon>Claro</button>
+            <div class="header__btns">
+                <button class="btn"><iconify-icon class="btn__icon" icon="ph:moon"></iconify-icon>Oscuro</button>
+                <button class="btn"><iconify-icon class="btn__icon" icon="ph:sun"></iconify-icon>Claro</button>
             </div>
         </section>
-        <section>
-            <h3>Practica de fetch y DOM <span>"The Rick & Morty API"</span></h3>
-            <picture>
-                <img src="./public/img/dark_theme_image.png" alt="Imagen para el tema oscuro">
-                <img src="./public/img/light_theme_image.png" alt="Imagen para el tema claro">
+        <section class="header__section container">
+            <h1 class="header__tittle">Practica de fetch y DOM <span class="header__tittle--span">"The Rick & Morty API"</span></h1>
+            <picture class="header__img">
+                <img class="dark-theme" src="./public/img/dark_theme_image.png" alt="Imagen para el tema oscuro">
+                <img class="light-theme" src="./public/img/light_theme_image.png" alt="Imagen para el tema claro">
             </picture>
         </section>
     </header>
@@ -39,6 +39,7 @@
     <footer>
         <p>Practicas de fetch y DOM by Carlos Soto 2023</p>
     </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
 </body>
 </html>
