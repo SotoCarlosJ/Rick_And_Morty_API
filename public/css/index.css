@@ -149,10 +149,8 @@ img {
     padding: var(--spacing-68);
     display: grid;
     place-items: center;
-    display: none;
 }
 .loader__ring {
-    display: none;
     width: 128px;
     height: 128px;
     border: 12px solid var(--dark-gray);

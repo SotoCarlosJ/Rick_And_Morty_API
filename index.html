@@ -27,11 +27,11 @@
         </section>
     </header>
 
-    <main class="main">
-        <div class="container main__container"> <!-- div container -->
-            <section class="loader"><article class="loader__ring"></article></section> <!-- article para el loader -->
-            <section class="search"><input class="search__input" type="text" id="search" name="search" placeholder="Buscar personaje por nombre o id" autocomplete="off" spellcheck="false"><iconify-icon class="search__icon" icon="octicon:search-16"></iconify-icon></section> <!-- article para el buscador de personajes -->
-            <section class="characters"></section> <!-- article para el listado de personajes -->
+    <main id="main" class="main">
+        <div id="main-container" class="container main__container"> <!-- div container -->
+            <section id="loader" class="loader"><article id="loader__ring" class="loader__ring"></article></section> <!-- article para el loader -->
+            <section id="search" class="search"><input class="search__input" type="text" id="search" name="search" placeholder="Buscar personaje por nombre o id" autocomplete="off" spellcheck="false"><iconify-icon class="search__icon" icon="octicon:search-16"></iconify-icon></section> <!-- article para el buscador de personajes -->
+            <section id="characters" class="characters"></section> <!-- article para el listado de personajes -->
             <section></section> <!-- article para los botones de paginas -->
         </div> 
     </main>
@@ -44,6 +44,6 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
-    <script src="./src/index.js"></script>
+    <script src="./src/index.js" type="module"></script>
 </body>
 </html>
