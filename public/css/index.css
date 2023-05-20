@@ -139,3 +139,28 @@ img {
 .footer__text {
     padding-top: var(--spacing-24);
 }
+
+/**
+* Creacion de un loader
+*/
+.loader {
+    padding: var(--spacing-68);
+    display: grid;
+    place-items: center;
+}
+.loader__ring {
+    width: 128px;
+    height: 128px;
+    border: 12px solid var(--dark-gray);
+    border-top: 12px solid var(--blue-solid);
+    border-radius: 50%;
+    animation: loader 2s linear infinite;
+}
+@keyframes loader {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
