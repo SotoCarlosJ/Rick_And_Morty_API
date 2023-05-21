@@ -46,7 +46,7 @@ setTimeout(() => {
                     <p class="card__text"><iconify-icon icon="ph:planet"></iconify-icon>${character.origin.name}</p>
                     </div>
                 </div>
-                <a class="card__link" href="/pages/character.html?id=${character.id}"><iconify-icon icon="ph:info"></iconify-icon>Ver detalles</a>
+                <a class="card__link" href="pages/character.html?id=${character.id}"><iconify-icon icon="ph:info"></iconify-icon>Ver detalles</a>
             `
 
             characters.appendChild(article);
