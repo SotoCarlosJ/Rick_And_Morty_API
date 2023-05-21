@@ -36,7 +36,7 @@ setTimeout(() => {
             </picture>
             <div class="character__content">
                 <h1 class="character__tittle">${data.name}</h1>
-                <p class="character__episodes"><span><iconify-icon icon="ph:monitor-play-bold"></iconify-icon></span> Aparecio en: ${data.episode.length}</p>
+                <p class="character__episodes"><iconify-icon icon="ph:monitor-play-bold"></iconify-icon>Aparecio en: ${data.episode.length}</p>
                 <div class="character__info">
                     <p class="character__text">${
                         /**
@@ -49,21 +49,21 @@ setTimeout(() => {
                     <p class="character__text"><iconify-icon icon="ph:alien"></iconify-icon>${data.species}</p>
                     <p class="character__text"><iconify-icon icon="ph:gender-intersex"></iconify-icon>${data.gender}</p>
                 </div>
-                <div class="location">
+            </div>
+            <div class="location">
                     <div class="location__content">
                         <iconify-icon class="location__icon" icon="ph:planet"></iconify-icon>
-                        <p class="location__text location__text--color">Origin: ${data.origin.name}</p>
+                        <p class="location__text location__text--color">${data.origin.name}</p>
                         <a class="btn btn--location" href="#"><iconify-icon icon="ph:info"></iconify-icon>Ver mas</a>
-                        <button class="location__like unliked"><iconify-icon icon="icon-park-solid:like"></iconify-icon></button>
+                        <button class="location__like"><iconify-icon class="like-icon" icon="iconamoon:heart"></iconify-icon></button>
                     </div>
                     <div class="location__content">
                         <iconify-icon class="location__icon" icon="ep:location"></iconify-icon>
-                        <p class="location__text">Location: ${data.location.name}</p>
+                        <p class="location__text">${data.location.name}</p>
                         <a class="btn btn--location" href="#"><iconify-icon icon="ph:info"></iconify-icon>Ver mas</a>
-                        <button class="location__like unliked"><iconify-icon icon="icon-park-solid:like"></iconify-icon></button>
+                        <button class="location__like"><iconify-icon class="like-icon" icon="iconamoon:heart"></iconify-icon></button>
                     </div>
                 </div>
-            </div>
             `
             character.appendChild(article);
     }

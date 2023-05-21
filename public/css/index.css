@@ -265,3 +265,99 @@ img {
     font-size: var(--font-small);
     font-weight: 400;
 }
+
+/**
+* Estilos para el main del character.html
+*/
+.header--character {
+    background-color: var(--black-A);
+}
+#main-character {
+    background-color: var(--black-A);
+    border-bottom: 1px solid var(--blue-solid);
+}
+.character {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-24) var(--spacing-36);
+}
+.btn--character {
+    grid-area: 1 / 1 / 2 / 2;
+    cursor: pointer;
+    margin-right: auto;
+    padding: var(--spacing-8) var(--spacing-16);
+}
+.character__cover {
+    grid-area: 2 / 1 / 3 / 2;
+}
+.character__img {
+    border-radius: 16px;
+}
+.character__content {
+    grid-area: 2 / 2 / 3 / 3;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-28);
+}
+.character__tittle {
+    margin: 0;
+    font-size: var(--font-display);
+    font-weight: 700;
+}
+.character__episodes {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-8);
+    font-size: var(--font-large);
+}
+.character__info {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-28);
+}
+.character__text {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-8);
+    font-size: var(--font-medium);
+}
+.location {
+    grid-area: 2 / 3 / 3 / 4;
+    align-self: flex-end;
+    display: flex;
+    gap: var(--spacing-28);
+}
+.location__content {
+    background-color: var(--dark-gray);
+    border-radius: 16px;
+    padding: var(--spacing-24) var(--spacing-16) var(--spacing-16);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-16);
+}
+.location__icon {
+    font-size: var(--font-display);
+    position: absolute;
+    top: -32px;
+}
+.location__text {
+    font-size: var(--font-medium);
+}
+.location__text--color {
+    color: var(--blue-solid);
+}
+.btn--location {
+    padding-right: var(--spacing-8);
+    width: 100%;
+}
+.location__like {
+    border-style: none;
+    background-color: inherit;
+    cursor: pointer;
+}
+.like-icon {
+    font-size: var(--font-jumbo);
+    color: var(--blue-solid);
+}
