@@ -36,7 +36,7 @@ setTimeout(() => {
                     <p id="${character.id}-icon" class="card__text">
                     ${
                     /**
-                     * Icono de vida o muerte segun estatus del personaje
+                     * Icono de vida (incluye status unknow) o muerte segun estatus del personaje
                      */
                     character.status.toLowerCase() == 'alive' || character.status.toLowerCase() == 'unknown' 
                     ? '<iconify-icon class="status__icon" icon="pajamas:status-health"></iconify-icon>' 
@@ -46,7 +46,7 @@ setTimeout(() => {
                     <p class="card__text"><iconify-icon icon="ph:planet"></iconify-icon>${character.origin.name}</p>
                     </div>
                 </div>
-                <a class="card__link" href="/character?id=${character.id}"><iconify-icon icon="ph:info"></iconify-icon>Ver detalles</a>
+                <a class="card__link" href="/pages/character.html?id=${character.id}"><iconify-icon icon="ph:info"></iconify-icon>Ver detalles</a>
             `
 
             characters.appendChild(article);
@@ -59,4 +59,4 @@ setTimeout(() => {
      */
     loaderRing.classList.remove('loader__ring');
     loader.classList.remove('loader');
-}, 2000);
+}, 1000);

@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../public/css/character.css">
+    <link rel="stylesheet" href="../public/css/index.css">
     <title>Character | Rick & Morty API</title>
 </head>
 <body>
     <header class="header">
         <section class="header__section container">
             <picture class="header__logo">
-                <img src="../public/img/Logo_Rick_&_Morty_B.png" alt="logo Rick & Morty Show">
+                <img src="../public/img/Logo_Rick_&_Morty_A.png" alt="logo Rick & Morty Show">
             </picture>
             <div class="header__btns">
                 <button class="btn"><iconify-icon class="btn__icon" icon="ph:moon"></iconify-icon>Oscuro</button>
@@ -20,12 +20,12 @@
         </section>
     </header>
 
-    <main>
-        <section> <!-- section container -->
-            <article></article> <!-- article para el loader -->
-            <article></article> <!-- article para el personaje seleccionado -->
-            <article></article> <!-- article para mas personajes -->
-        </section> 
+    <main id="main-character" class="main">
+        <div id="character-container" class="container main__container"> <!-- div container -->
+            <section id="loader" class="loader"><article id="loader__ring" class="loader__ring"></article></section> <!-- article para el loader -->
+            <section id="character"></section> <!-- article para el personaje seleccionado -->
+            <section id="pagination" class="pagination"></section> <!-- article para el pagination -->
+        </div>
     </main>
 
     <footer class="footer">
@@ -36,5 +36,6 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
+    <script src="../src/character.js" type="module"></script>
 </body>
 </html>
