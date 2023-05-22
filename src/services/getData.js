@@ -25,7 +25,21 @@ const getCharacter = async (id) => {
     return data;
 }
 
+const previousPage = (container, callback) => {
+    container.innerHTML = '';
+    callback(localStorage.previousPage);
+    window.scroll(0, 0);
+}
+
+const nextPage = (container, callback) => {
+    container.innerHTML = '';
+    callback(localStorage.nextPage);
+    window.scroll(0, 0);
+}
+
 export {
     getCharacters,
-    getCharacter
+    getCharacter,
+    previousPage,
+    nextPage
 }

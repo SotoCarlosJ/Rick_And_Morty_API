@@ -1,7 +1,7 @@
 /**
  * Importando la funcion para traer los personajes
  */
-import { getCharacters } from "./services/getData.js";
+import { getCharacters, previousPage, nextPage } from "./services/getData.js";
 
 /**
  * Guardando los elementos del DOM
@@ -12,6 +12,9 @@ const loader = document.querySelector('#loader');
 const loaderRing = document.querySelector('#loader__ring');
 const search = document.querySelector('#search');
 const characters = document.querySelector('#characters');
+const previous = document.querySelector('#previous');
+const pagination = document.querySelector('#pagination');
+const next = document.querySelector('#next');
 
 /**
  * Funcion asincrona para listar personajes por pagina
@@ -20,6 +23,16 @@ const characters = document.querySelector('#characters');
 setTimeout(() => {
     const listCharacters = async (page = 1) => {
         const { info, results } = await getCharacters(page);
+        /**
+         * Almacenando en el localStorage el numero de pagina consultado en la API
+         */
+        localStorage.setItem('currentPage', page);
+
+        /**
+         * Almacenando en el localStorage el valor de la pagina anterior y la pagina siguiente en relacion a la pagina actual consultada a la API
+         */
+        info.next ? localStorage.setItem('nextPage', info.next.split('=')[1]) : localStorage.setItem('nextPage', info.page);
+        info.prev ? localStorage.setItem('previousPage', info.prev.split('=')[1]) : localStorage.setItem('previousPage', 1);
         
         /**
          * Creacion de card por cada personaje listado
@@ -51,19 +64,29 @@ setTimeout(() => {
 
             characters.appendChild(article);
         });
-
-        /**
-         * Almacenando en el localStorage el numero de pagina consultado en la API
-         */
-        localStorage.setItem('backPage', page);
     };
     
-    !localStorage.backPage 
+    !localStorage.currentPage 
     ? listCharacters()
-    : listCharacters(localStorage.backPage);
+    : listCharacters(localStorage.currentPage);
     /**
      * Sacando el loader cuando carguen los personajes
      */
     loaderRing.classList.remove('loader__ring');
     loader.classList.remove('loader');
+
+
+    /**
+     * Funcion para actualizar lista de personajes a la pagina anterior
+     */
+    previous.addEventListener('click', () => {
+        previousPage(characters, listCharacters);
+    });
+
+        /**
+     * Funcion para actualizar lista de personajes a la pagina siguiente
+     */
+    next.addEventListener('click', () => {
+        nextPage(characters, listCharacters);
+    });
 }, 1000);
