@@ -65,12 +65,25 @@ setTimeout(() => {
                     </div>
                 </div>
             `
-            character.appendChild(article);
+        character.appendChild(article);
+
+        /**
+        * Agregando la funcionabilidad del boton "Back to homepage"
+        */
+        const goBack = document.querySelector('#goBack');
+        goBack.addEventListener('click', () => {
+            window.location.replace('/index.html');
+        })
+
+        /**
+        * Sacando el loader cuando carguen los personajes
+        */
+        loaderRing.classList.remove('loader__ring');
+        loader.classList.remove('loader');
+
     }
     loadCharacter(charID);
-    /**
-     * Sacando el loader cuando carguen los personajes
-     */
-    loaderRing.classList.remove('loader__ring');
-    loader.classList.remove('loader');
+
 }, 1000);
+
+

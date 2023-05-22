@@ -51,9 +51,16 @@ setTimeout(() => {
 
             characters.appendChild(article);
         });
-    }
+
+        /**
+         * Almacenando en el localStorage el numero de pagina consultado en la API
+         */
+        localStorage.setItem('backPage', page);
+    };
     
-    listCharacters();
+    !localStorage.backPage 
+    ? listCharacters()
+    : listCharacters(localStorage.backPage);
     /**
      * Sacando el loader cuando carguen los personajes
      */
