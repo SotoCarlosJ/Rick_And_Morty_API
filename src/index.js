@@ -76,8 +76,8 @@ setTimeout(() => {
         * Mostrando pagina actual en la paginacion
         */
         pagination.innerHTML = `
-            <p>${localStorage.currentPage}</p>
-            <p>de: ${localStorage.lastPage}</p>
+            <p class="pagination__text">${localStorage.currentPage}</p>
+            <p class="pagination__text">de ${localStorage.lastPage}</p>
             `
     };
     

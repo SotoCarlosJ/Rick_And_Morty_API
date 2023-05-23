@@ -76,6 +76,10 @@ img {
     justify-content: center;
     align-items: center;
     gap: var(--spacing-8);
+    cursor: pointer;
+}
+.btn:hover {
+    opacity: 0.75;
 }
 .btn__icon {
     display: flex;
@@ -360,4 +364,34 @@ img {
 .like-icon {
     font-size: var(--font-jumbo);
     color: var(--blue-solid);
+}
+
+/**
+* Estilos para el pagination en index.html
+*/
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-16);
+}
+.btn--pagination {
+    background-color: var(--green-solid);
+    border-radius: 8px;
+    padding: var(--spacing-8);
+    color: var(--black-A);
+    font-size: var(--font-large);
+    font-weight: 700;
+}
+.pagination__display {
+    display: flex;
+    gap: var(--spacing-8);
+    background-color: var(--dark-gray);
+    border-radius: 8px;
+    padding: var(--spacing-16) var(--spacing-24);
+
+}
+.pagination__text {
+    font-size: var(--font-medium);
+    font-weight: 700;
 }
