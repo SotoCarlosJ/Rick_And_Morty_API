@@ -71,8 +71,8 @@ setTimeout(() => {
         * Agregando la funcionabilidad del boton "Back to homepage"
         */
         const goBack = document.querySelector('#goBack');
-        goBack.addEventListener('click', () => {
-            window.location.replace('/index.html');
+            goBack.addEventListener('click', () => {
+            window.location.replace(`${window.location.origin}/index.html`);
         })
 
         /**
