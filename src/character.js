@@ -72,7 +72,7 @@ setTimeout(() => {
         */
         const goBack = document.querySelector('#goBack');
             goBack.addEventListener('click', () => {
-            window.location.replace(`${window.location.origin}/index.html`);
+            window.location.replace(`../index.html`);
         })
 
         /**
