@@ -186,6 +186,7 @@ img {
 * Estilos para el input buscardor de personajes
 */
 .search {
+    width: 100%;
     display: flex;
     align-items: center;
     max-width: 400px;
@@ -394,4 +395,40 @@ img {
 .pagination__text {
     font-size: var(--font-medium);
     font-weight: 700;
+}
+
+/**
+ * Estilos para el nombre del personaje filtrado
+ */
+.filter-container {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-28);
+}
+.filter {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-16);
+    font-weight: 700;
+    background-color: var(--dark-gray);
+    padding: var(--spacing-8) var(--spacing-16);
+    border-radius: 16px;
+}
+#filter-name {
+    font-size: var(--font-medium);
+    font-weight: 700;
+    text-decoration: underline;
+}
+#filter-close {
+    cursor: pointer;
+    border-style: none;
+    padding: 3px 6px;
+    border-radius: 50%;
+    background-color: var(--blue-solid);
+    font-size: 12px;
+    font-weight: 700;
+}
+#pagination-filter {
+    display: none;
 }

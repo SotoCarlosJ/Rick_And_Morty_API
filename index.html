@@ -29,10 +29,12 @@
 
     <main id="main" class="main">
         <div id="main-container" class="container main__container"> <!-- div container -->
-            <section id="search-container" class="search">
-                <input class="search__input" type="text" id="search" name="search" placeholder="Buscar personaje por nombre o id" autocomplete="off" spellcheck="false">
-                <iconify-icon id="search-icon" class="search__icon" icon="octicon:search-16"></iconify-icon>
-                <div style="display: none;" id="filter" class="filter">
+            <section class="filter-container">
+                <div id="search-container" class="search">
+                    <input class="search__input" type="text" id="search" name="search" placeholder="Buscar personaje por nombre o id" autocomplete="off" spellcheck="false">
+                    <iconify-icon id="search-icon" class="search__icon" icon="octicon:search-16"></iconify-icon>
+                </div>
+                <div id="filter" class="filter">
                     <p id="filter-name"></p>
                     <button id="filter-close">x</button>
                 </div>
