@@ -29,16 +29,30 @@
 
     <main id="main" class="main">
         <div id="main-container" class="container main__container"> <!-- div container -->
+            <section id="search-container" class="search">
+                <input class="search__input" type="text" id="search" name="search" placeholder="Buscar personaje por nombre o id" autocomplete="off" spellcheck="false">
+                <iconify-icon id="search-icon" class="search__icon" icon="octicon:search-16"></iconify-icon>
+                <div style="display: none;" id="filter" class="filter">
+                    <p id="filter-name"></p>
+                    <button id="filter-close">x</button>
+                </div>
+            </section> <!-- article para el buscador de personajes -->
             <section id="loader" class="loader"><article id="loader__ring" class="loader__ring"></article></section> <!-- article para el loader -->
-            <section id="search" class="search"><input class="search__input" type="text" id="search" name="search" placeholder="Buscar personaje por nombre o id" autocomplete="off" spellcheck="false"><iconify-icon class="search__icon" icon="octicon:search-16"></iconify-icon></section> <!-- article para el buscador de personajes -->
             <section id="characters" class="characters"></section> <!-- article para el listado de personajes -->
-            <section class="pagination container"> <!-- article para los botones de paginas -->
+            <section id="pagination" class="pagination container"> <!-- article para los botones de paginas -->
                 <button id="first" class="btn btn--pagination"><iconify-icon icon="ci:chevron-left-duo"></iconify-icon></button>
                 <button id="previous" class="btn btn--pagination"><iconify-icon icon="ci:chevron-left-md"></iconify-icon></button>
-                <article id="pagination" class="pagination__display"></article>
+                <article id="display" class="pagination__display"></article>
                 <button id="next" class="btn btn--pagination"><iconify-icon icon="ci:chevron-right-md"></iconify-icon></button>
                 <button id="last" class="btn btn--pagination"><iconify-icon icon="ci:chevron-right-duo"></iconify-icon></button>
-            </section> 
+            </section>
+            <section id="pagination-filter" class="pagination container"> <!-- article para los botones de paginas -->
+                <button id="first-filter" class="btn btn--pagination"><iconify-icon icon="ci:chevron-left-duo"></iconify-icon></button>
+                <button id="previous-filter" class="btn btn--pagination"><iconify-icon icon="ci:chevron-left-md"></iconify-icon></button>
+                <article id="display-filter" class="pagination__display"></article>
+                <button id="next-filter" class="btn btn--pagination"><iconify-icon icon="ci:chevron-right-md"></iconify-icon></button>
+                <button id="last-filter" class="btn btn--pagination"><iconify-icon icon="ci:chevron-right-duo"></iconify-icon></button>
+            </section>
         </div> 
     </main>
 
